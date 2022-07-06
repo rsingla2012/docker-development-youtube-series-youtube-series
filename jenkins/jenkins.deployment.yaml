@@ -19,10 +19,13 @@ spec:
       labels:
         app: jenkins
     spec:
-      serviceAccountName: jenkins
+      serviceAccount: jenkins
       containers:
       - name: jenkins
-        image: jenkins/jenkins:2.235.1-lts-alpine
+        #image: jenkins/jenkins:2.235.1-lts-alpine
+        #image: jenkins/jenkins:lts
+        image: jenkins/jenkins:2.346.1-lts
+        #image: jenkins/jenkins:2.258-jdk11
         imagePullPolicy: IfNotPresent
         env:
         - name: JAVA_OPTS

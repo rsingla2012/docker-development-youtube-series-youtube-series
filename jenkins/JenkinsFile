@@ -1,6 +1,6 @@
 node('jenkins-slave') {
     
-     stage('test pipeline') {----------------------             
+     stage('test pipeline') {             
         tools {
             jdk "jdk-11.0.15"
         }

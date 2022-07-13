@@ -1,12 +1,12 @@
 node('jenkins-slave') {
     
-     stage('test pipeline') {
+     stage('test pipeline') {----------------------             
         tools {
             jdk "jdk-11.0.15"
         }
         sh(script: """
             echo "hello"
-           git clone https://github.com/marcel-dempers/docker-development-youtube-series.git
+           git clone https://github.com/rsingla2012/docker-development-youtube-series-youtube-series.git
            cd ./docker-development-youtube-series/golang
            
            docker build . -t test

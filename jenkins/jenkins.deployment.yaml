@@ -33,7 +33,7 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-        - containerPort: 49000
+        - containerPort: 50000
           protocol: TCP
         volumeMounts:
         - mountPath: /var/jenkins_home

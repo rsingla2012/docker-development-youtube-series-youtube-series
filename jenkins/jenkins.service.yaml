@@ -12,7 +12,7 @@ spec:
       targetPort: 8080
       protocol: TCP
     - name: slave
-      port: 49000
+      port: 50000
       protocol: TCP
     - name: http
       port: 80

@@ -10,7 +10,7 @@ RUN echo "inside jenkins dockerfile"
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=10000
-ARG gid=10000
+ARG gid=1001
 
 ENV HOME /home/${user}
 RUN groupadd -g ${gid} ${group}

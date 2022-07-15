@@ -5,6 +5,8 @@ RUN apt-get update -y && apt-get install -y curl sudo
 #Install docker
 RUN curl -sSL https://get.docker.com/ | sh
 
+RUN echo "inside jenkins dockerfile"
+
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=10000

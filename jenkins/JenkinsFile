@@ -6,18 +6,7 @@ node('jenkins-slave') {
            git clone https://github.com/rsingla2012/docker-development-youtube-series-youtube-series.git
            pwd
            cd ./docker-development-youtube-series/golang
-		   
-		   USER root
-			RUN apt-get -qq update \
-			   && apt-get -qq -y install \
-			   curl
-
-			RUN curl -sSL https://get.docker.com/ | sh
-
-			RUN usermod -a -G staff jenkins
-
-			USER jenkins
-           
+	
            docker build . -t test
         """)
     }

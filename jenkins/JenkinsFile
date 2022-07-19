@@ -1,12 +1,18 @@
 node('jenkins-slave') {
     
+     stage('Initialize')
+    {
+        def dockerHome = tool 'docker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
+     
      stage('test pipeline') {             
         sh(script: """
-            echo "hello"
+           
            git clone https://github.com/rsingla2012/docker-development-youtube-series-youtube-series.git
-           pwd
-           cd ./docker-development-youtube-series/golang
-	
+           
+           cd docker-development-youtube-series-youtube-series/golang
+           
            docker build . -t test
         """)
     }
